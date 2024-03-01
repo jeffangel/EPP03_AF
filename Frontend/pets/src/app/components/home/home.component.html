@@ -1,0 +1,85 @@
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card shadow">
+                    <div class="card-title text-center border-bottom">
+                        <h2 class="p-3">Create loss Case</h2>
+                    </div>
+                    <div class="card-body">
+                        <!-- CASE -->
+                        <form [formGroup]="case_form" (ngSubmit)="register()">
+                            <div class="mb-4">
+                                <label for="loss_date" class="form-label">Lost day</label>
+                                <input type="text" class="form-control" id="loss_date" formControlName="loss_date"
+                                    placeholder="31/10/2023" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="city" class="form-label">City</label>
+                                <input type="text" class="form-control" id="city" formControlName="city"
+                                    placeholder="Lima" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="street" class="form-label">Street or location</label>
+                                <input type="text" class="form-control" id="street" formControlName="street"
+                                    placeholder="Fifth avenue" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="district" class="form-label">District</label>
+                                <input type="text" class="form-control" id="district" formControlName="district"
+                                    placeholder="San Miguel" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="reference" class="form-label">Circumstances</label>
+                                <input type="text" class="form-control" id="reference" formControlName="reference"
+                                    placeholder="Circumstances" />
+                            </div>
+                            <!-- PET -->
+                            <div class="mb-4">
+                                <label for="pet_name" class="form-label">Pet's name</label>
+                                <input type="text" class="form-control" id="pet_name" formControlName="pet_name"
+                                    placeholder="Doggy" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="pet_breed" class="form-label">Pet's breed</label>
+                                <input type="text" class="form-control" id="pet_breed" formControlName="pet_breed"
+                                    placeholder="Creole" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="pet_color" class="form-label">Pet's color</label>
+                                <input type="text" class="form-control" id="pet_color" formControlName="pet_color"
+                                    placeholder="Black" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="pet_sex" class="form-label">Pet's sex</label>
+                                <input type="text" class="form-control" id="pet_sex" formControlName="pet_sex"
+                                    placeholder="Male or Female" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="pet_neutered" class="form-label">Is the pet neutered?</label>
+                                <input type="text" class="form-control" id="pet_neutered" formControlName="pet_neutered"
+                                    placeholder="Yes or No" />
+                            </div>
+                            <!-- FEATURES -->
+                            <div class="mb-4">
+                                <label for="pet_characteristic" class="form-label">Pet's characteristic</label>
+                                <input type="text" class="form-control" id="pet_characteristic" formControlName="pet_characteristic"
+                                    placeholder="Any relevant characteristic" />
+                            </div>
+                            <!-- IMAGES -->
+                            <div class="mb-4">
+                                <label for="pet_photo" class="form-label">Pet's photo</label>
+                                <input (change)="this.onFilechange($event)" class="form-control" type="file" id="pet_photo" formControlName="pet_photo">
+                            </div>
+                            <!-- SUBMIT -->
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary"
+                                    [disabled]="!case_form.valid">Create</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

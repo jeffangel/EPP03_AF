@@ -1,0 +1,38 @@
+<body>
+    <!-- Login Form -->
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card shadow">
+                    <div class="card-title text-center border-bottom">
+                        <h2 class="p-3">Log In</h2>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="login_form" (ngSubmit)="login()">
+                            <div class="mb-4">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="text" class="form-control" id="email" formControlName="email"
+                                    placeholder="user@cirion.local" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" formControlName="password"
+                                    placeholder="password" />
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary"
+                                    [disabled]="!login_form.valid">Login</button>
+                            </div>
+                        </form>
+                        <br>
+                        <form [formGroup]="login_form" (ngSubmit)="register()">
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Register</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

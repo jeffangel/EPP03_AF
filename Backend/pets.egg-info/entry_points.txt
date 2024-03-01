@@ -1,0 +1,2 @@
+[console_scripts]
+pets = pets.__main__:main

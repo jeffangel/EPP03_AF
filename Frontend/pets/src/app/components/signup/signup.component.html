@@ -1,0 +1,63 @@
+<body>
+    <!-- Signup Form -->
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card shadow">
+                    <div class="card-title text-center border-bottom">
+                        <h2 class="p-3">Register</h2>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="signup_form" (ngSubmit)="register()">
+                            <div class="mb-4">
+                                <label for="dni" class="form-label">DNI</label>
+                                <input type="text" class="form-control" id="dni" formControlName="dni"
+                                    placeholder="" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" formControlName="name"
+                                    placeholder="" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="lastname1" class="form-label">Last Name 1</label>
+                                <input type="text" class="form-control" id="lastname1" formControlName="lastname1"
+                                    placeholder="" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="lastname2" class="form-label">Last Name 2</label>
+                                <input type="text" class="form-control" id="lastname2" formControlName="lastname2"
+                                    placeholder="" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="text" class="form-control" id="email" formControlName="email"
+                                    placeholder="user@domain.local" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="cell_phone" class="form-label">Cell Phone</label>
+                                <input type="text" class="form-control" id="cell_phone" formControlName="cell_phone"
+                                    placeholder="+51987897891" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" formControlName="password"
+                                    placeholder="password" />
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary"
+                                    [disabled]="!signup_form.valid">I want my account</button>
+                            </div>
+                        </form>
+                        <br>
+                        <form [formGroup]="signup_form" (ngSubmit)="login()">
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Go to login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

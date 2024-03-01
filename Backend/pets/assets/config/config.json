@@ -1,0 +1,20 @@
+{
+    "database" : {
+        "file" : {
+            "path" : "pets.assets.database",
+            "name" : "03eppy_proyecto_final.db"
+        }
+    },
+    "imgbb": {
+        "apikey" : "8c9bbc9ab9b77b9e116b4ddafac58ae9"
+    },
+    "hash":{
+        "encoded_format" : "utf-8",
+        "encoded_algorithm": "HS256",
+        "salt": "$2b$12$g4zZxOvJ5w.VC04wotbZvu",
+        "secret": "secret_token"
+    },
+    "cookie": {
+        "httponly": true
+    }
+}

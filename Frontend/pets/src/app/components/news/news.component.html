@@ -1,0 +1,49 @@
+<div style="overflow-x:auto;">
+	<table>
+		<thead>
+			<tr>
+				<th>Fecha de extravío</th>
+				<th>Nombre</th>
+				<th>Raza</th>
+				<th>Color</th>
+                <th>Ciudad</th>
+                <th>Calle</th>
+				<th>Caracteristica</th>
+				<th>Contacto</th>
+                <th>Imagen</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let case of cases; let n = index">
+				<!-- <th>{{ n + 1 }}</th> -->
+				<td>{{case[3]}}</td>
+                <td>{{case[9].mascotas[0][1]}}</td>
+                <td>{{case[9].mascotas[0][2]}}</td>
+                <td>{{case[9].mascotas[0][3]}}</td>
+                <td>{{case[4]}}</td>
+                <td>{{case[5]}}</td>
+                <td>{{case[9].mascotas[0][7].rasgos[0][2]}}</td>
+                <td>{{case[9].contacto[0]}} - {{case[9].contacto[1]}} </td>
+                <!-- <td>{{case[9].mascotas[0][7].imagenes[0][2]}}</td> -->
+                <td><a href={{case[9].mascotas[0][7].imagenes[0][2]}} target="_blank">View image</a></td>
+<!--  				<td *ngIf="index != n">{{instance.responsable}}
+					<br>
+					<button *ngIf="!updating" class="btn btn-default btn-sm" (click)="edit(n)">
+						<span class="glyphicon glyphicon-pencil"></span>
+					</button>
+				</td>
+				<td *ngIf="index == n">
+					<input type="text" placeholder="Nuevo responsable" class="p-2 w-full rounded-lg shadow-sm"
+						#responsable />
+					<button type="button" class="btn btn-default btn-sm" (click)="update(responsable.value,n)">
+						<span class="glyphicon glyphicon-ok"></span>
+					</button>
+					<button type="button" class="btn btn-default btn-sm" (click)="cancelar()">
+						<span class="glyphicon glyphicon-log-in"></span>
+					</button>
+				</td>
+				<td>{{instance.instanceid}}</td>
+			</tr> -->
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="is_logged$">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <img class="nav-img" src="../assets/logo_pet.svg" alt="alternative text for your image" routerLink="/">
+            </li>
+            <li class="nav-item dropdown">
+                <a class="dropdown-item" href="/news">News</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="dropdown-item" href="/">Create case</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a name="logout" class="nav-link" style="cursor:pointer" (click)="logout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
