@@ -2,11 +2,9 @@ from importlib import resources
 import logging
 from os.path import exists
 
-from flask import jsonify
 import sqlite3
 
-from pets.config import cfg_item, Config
-from pets.helpers.errors import IntegrityError
+from pets.config import cfg_item
 
 class Database():
     def __init__(self) -> None:

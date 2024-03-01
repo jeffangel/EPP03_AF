@@ -1,6 +1,5 @@
 import logging
 
-import json
 import requests
 
 from pets.config import cfg_item
